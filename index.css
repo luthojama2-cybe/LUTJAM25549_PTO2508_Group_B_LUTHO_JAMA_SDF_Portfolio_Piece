@@ -11,7 +11,13 @@
     --bx-clr: #fff3f3;
 }
 
+@font-face {
+    font-family: Raleway;
+    src: url(./fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
 body{
+    font-family: Raleway;
     line-height: 1.6;
     background-color: var(--bg-clr);
 }
@@ -133,12 +139,11 @@ body{
 
 .skills-list ul{
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.5em;
 }
 
-ul li{
+.skills-list ul li{
     list-style: none;
     font-size: 1.2rem;
     padding: .2em;
@@ -177,5 +182,93 @@ h2{
     padding: 1em;
     border-radius: 30px;
     background-color: #dad2d2;
+    font-size: 1.2rem;
+}
+
+/* Third Section */
+
+.section-3{
+    width: 80%;
+    padding: 2em;
+    border-radius: 30px;
+    background-color: var(--bx-clr);
+}
+
+.education-box h2{
+    text-align: center;
+}
+
+.education-list{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 1.2rem;
+}
+
+.education-list-1,
+.education-list-2,
+.education-list-3{
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    column-gap: 2em;
+    border-radius: 30px;
+    background-color:#dad2d2;;
+}
+
+/* Forth Section */
+
+.section-4{
+    width: 100%;
+    padding: 2em;
+    border-radius: 30px;
+    background-color: var(--bx-clr);
+}
+
+
+.experience-box{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 1.2rem;
+}
+
+.most-recent{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--lke-clr);
+}
+
+.experience-box-1,
+.experience-box-2,
+.experience-box-3{
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    column-gap: 2em;
+    border-radius: 30px;
+    background-color:#dad2d2;;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    padding: 2em;
+    border-radius: 30px;
+    background-color: var(--lke-clr);
+}
+
+footer h3{
+    font-size: 1.5rem;
+}
+
+.my-info{
+    margin-top: 1em;
+    display: flex;
+    gap: 2em;
     font-size: 1.2rem;
 }
