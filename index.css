@@ -183,7 +183,16 @@ h2{
     border-radius: 30px;
     background-color: #dad2d2;
     font-size: 1.2rem;
-    cursor: pointer;
+    cursor: default;
+    transition: .2s ease-in;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover{
+    color: #fff;
+    background-color: var(--hver-clr);
 }
 
 .header{
@@ -226,7 +235,15 @@ h2{
     padding: 1em;
     column-gap: 2em;
     border-radius: 30px;
-    background-color:#dad2d2;;
+    background-color:#dad2d2;
+    transition: .2s ease;
+}
+
+.education-list-1:hover,
+.education-list-2:hover,
+.education-list-3:hover{
+    background-color: var(--hver-clr);
+    color: #fff;
 }
 
 .sub-section-2{
@@ -234,6 +251,56 @@ h2{
     padding: 2em;
     border-radius: 30px;
     background-color: var(--bx-clr);
+}
+
+.tools-box h3{
+    text-align: center;
+}
+
+.languages-design-frameworks{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.languages .fa-brands{
+    display: block;
+    width: 100%;
+}
+
+.languages{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    width: 100%;
+    height: 270px;
+    margin-top: 2em;
+    border-radius: 30px;
+    background-color: #dad2d2;
+}
+
+.design{
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em;
+    align-items: center;
+    gap: 2em;
+    border-radius: 30px;
+    background-color: #dad2d2;
+}
+
+.frameworks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    padding: 1em;
+    gap: 3em;
+    border-radius: 30px;
+    background-color: #dad2d2;
 }
 
 /* Forth Section */
@@ -269,7 +336,16 @@ h2{
     padding: 1em;
     column-gap: 2em;
     border-radius: 30px;
-    background-color:#dad2d2;;
+    background-color:#dad2d2;
+    cursor: default;
+    transition: .2s ease;
+}
+
+.experience-box-1:hover,
+.experience-box-2:hover,
+.experience-box-3:hover{
+    background-color: var(--hver-clr);
+    color: #fff;
 }
 
 /* Footer */
@@ -278,6 +354,7 @@ footer{
     width: 100%;
     padding: 2em;
     border-radius: 30px;
+    color: #fff;
     background-color: var(--lke-clr);
 }
 
@@ -285,9 +362,25 @@ footer h3{
     font-size: 1.5rem;
 }
 
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .my-info{
     margin-top: 1em;
     display: flex;
     gap: 2em;
     font-size: 1.2rem;
+}
+
+/* Media Quiry */
+
+@media(width: 375px){
+    .img{
+        width: 50%;
+    }
+    .name-surname{
+        width: 50%;
+    }
 }
