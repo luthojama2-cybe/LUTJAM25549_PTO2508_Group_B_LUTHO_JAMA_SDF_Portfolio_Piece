@@ -36,15 +36,18 @@ body{
     gap: 2em;
 }
 
-.img{
-    background-image:url(./Images/Intro-image.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 25%;
+.img-box{
+    width: 30%;
     height: 300px;
     border-radius: 30px;
+    overflow: hidden;
     background-color: var(--bx-clr);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .name-surname{
@@ -189,6 +192,7 @@ h2{
     background-color: #dad2d2;
     font-size: 1.2rem;
     cursor: default;
+    box-shadow: 10px 1px 3px #5f5b5b;
     transition: .2s ease-in;
 }
 
@@ -241,6 +245,7 @@ h2{
     column-gap: 2em;
     border-radius: 30px;
     background-color:#dad2d2;
+    box-shadow: 10px 1px 3px #5f5b5b;
     transition: .2s ease;
 }
 
@@ -281,6 +286,7 @@ h3{
     height: 270px;
     margin-top: 2em;
     border-radius: 30px;
+    box-shadow: 10px 1px 3px #5f5b5b;
     background-color: #dad2d2;
 }
 
@@ -294,6 +300,7 @@ h3{
     padding: 1em;
     gap: 3em;
     border-radius: 30px;
+    box-shadow: 10px 1px 3px #5f5b5b;
     background-color: #dad2d2;
 }
 
@@ -307,6 +314,7 @@ h3{
     padding: 1em;
     gap: 3em;
     border-radius: 30px;
+    box-shadow: 10px 1px 3px #5f5b5b;
     background-color: #dad2d2;
 }
 
@@ -346,6 +354,7 @@ h3{
     background-color:#dad2d2;
     cursor: default;
     transition: .2s ease;
+    box-shadow: 10px 1px 3px #5f5b5b;
 }
 
 .experience-box-1:hover,
@@ -385,7 +394,7 @@ footer a{
 
 @media(width <= 1080px){
 /* Introduction Section */
-.img,
+.img-box,
 .name-surname{
     width: 50%;
 }
@@ -464,11 +473,15 @@ footer a{
 @media(max-width: 730px){
     .introduction-section{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
-    .img,
+    .img-box,
     .name-surname{
-        width: 100%;
+        width: 50%;
+    }
+
+    .name-surname{
+        font-size: .5rem;
     }
 
       .section-1{
@@ -488,27 +501,27 @@ footer a{
     justify-content: space-between;
     align-items: center;
 }
+
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 }
 
 
 /* Iphone Design */
-@media(max-width: 375px){
-    body{
-        font-size: .8rem;
-    }
+@media(width<=559px){
     /* Introduction Section */
     .introduction-section{
         display: flex;
         flex-direction: column;
     }
 
-    .img,
+    .img-box,
     .name-surname{
         width: 100%;
     }
-    .intro-paragraph{
-        font-size: 1rem;
-    }
+
 
     /* First Section */
     .section-1{
@@ -521,6 +534,12 @@ footer a{
         width: 100%;
     }
 
+    /* Second Section */
+    .project-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
     /* Third Section */
     .education-list-1,
     .education-list-2,
@@ -528,6 +547,13 @@ footer a{
         display: flex;
         flex-direction: column;
         gap: 1em;
+    }
+
+    .education-list-1:active,
+    .education-list-2:active,
+    .education-list-3:active{
+        background-color: var(--hver-clr);
+        color: #fff;
     }
 
   .languages-design-frameworks{
@@ -549,12 +575,21 @@ footer a{
     .experience-box-3{
         display: flex;
         flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .experience-box-1:active,
+    .experience-box-2:active,
+    .experience-box-3:active{
+        background-color: var(--hver-clr);
+        color: #fff;
     }
 
     /* Footer */
     .my-info{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
 }
