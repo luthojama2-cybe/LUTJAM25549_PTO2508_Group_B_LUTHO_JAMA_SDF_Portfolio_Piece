@@ -64,7 +64,7 @@ You will be scored on:
 
 PRESENTATION LINK BELOW!!
 
-📎 [https://www.loom.com/share/a92fd015e7054598beefbf65cd2607ad](https://github.com/CodeSpace-Academy/SDFPP-2025/blob/main/project%20guide/presentation_template.md)
+📎 [https://www.loom.com/share/f32821efbc10423aa5ad6f3901af22f5](https://github.com/CodeSpace-Academy/SDFPP-2025/blob/main/project%20guide/presentation_template.md)
 
 ---
 
