@@ -37,6 +37,10 @@ body{
 }
 
 .img{
+    background-image:url(./Images/Intro-image.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 25%;
     height: 300px;
     border-radius: 30px;
@@ -54,7 +58,7 @@ body{
 }
 
 .intro-paragraph{
-    width: 70ch;
+    width: fit-content;
     font-size: 1.5rem;
 }
 
@@ -178,6 +182,7 @@ h2{
     width: 25%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 2em;
     padding: 1em;
     border-radius: 30px;
@@ -253,7 +258,7 @@ h2{
     background-color: var(--bx-clr);
 }
 
-.tools-box h3{
+h3{
     text-align: center;
 }
 
@@ -280,19 +285,21 @@ h2{
 }
 
 .design{
-    width: 100%;
-    height: 150px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2em;
+    width: 100%;
+    height: 200px;
+    padding: 1em;
+    gap: 3em;
     border-radius: 30px;
     background-color: #dad2d2;
 }
 
 .frameworks{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -376,11 +383,178 @@ footer a{
 
 /* Media Quiry */
 
-@media(width: 375px){
-    .img{
-        width: 50%;
+@media(width <= 1080px){
+/* Introduction Section */
+.img,
+.name-surname{
+    width: 50%;
+}
+
+.intro-paragraph{
+    font-size: 1rem;
+}
+
+/* First Section */
+
+
+
+ /* Third Section */
+ .design{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 3em;
+ }
+
+ /* Second Section */
+ .project-cards{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .card-1,
+.card-2,
+.card-3,
+.card-4{
+    width: 100%;
+}
+
+/* Third Section */
+.section-3{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-section-1{
+    width: 100%;
+}
+
+.sub-section-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.tools-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+h3{
+    text-align: center;
+}
+
+.languages-design-frameworks{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a{
+    display: none;
+}
+
+}
+
+/* Ipad Design */
+
+@media(max-width: 730px){
+    .introduction-section{
+        display: flex;
+        flex-direction: column;
     }
+    .img,
     .name-surname{
-        width: 50%;
+        width: 100%;
     }
+
+      .section-1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proficiency-box,
+    .skills-box{
+        width: 100%;
+    }
+
+      .languages-design-frameworks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
+
+/* Iphone Design */
+@media(max-width: 375px){
+    body{
+        font-size: .8rem;
+    }
+    /* Introduction Section */
+    .introduction-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img,
+    .name-surname{
+        width: 100%;
+    }
+    .intro-paragraph{
+        font-size: 1rem;
+    }
+
+    /* First Section */
+    .section-1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proficiency-box,
+    .skills-box{
+        width: 100%;
+    }
+
+    /* Third Section */
+    .education-list-1,
+    .education-list-2,
+    .education-list-3{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+  .languages-design-frameworks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .sub-section-2 h2{
+        text-align: center;
+    }
+
+    /* Forth Section */
+
+    .experience-box-1,
+    .experience-box-2,
+    .experience-box-3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .my-info{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
